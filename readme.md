@@ -1,0 +1,1 @@
+Este código cria uma página de produto com um design simples. Quando o usuário clica em uma cor na seção de seleção, a cor de fundo do produto muda suavemente para a cor selecionada, graças às transições suaves definidas no CSS.

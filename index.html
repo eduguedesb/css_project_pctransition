@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Produto - Transição de Cores</title>
+    <style>
+        :root {
+            --product-color: #3498db;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .product {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: var(--product-color);
+            transition: background-color 0.5s ease;
+        }
+
+        .product h1 {
+            color: #fff;
+        }
+
+        .color-selector {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="product">
+        <h1>Produto Exemplar</h1>
+        <div class="color-selector">
+            <div class="color-option" style="background-color: #3498db;" onclick="changeColor('#3498db')"></div>
+            <div class="color-option" style="background-color: #e74c3c;" onclick="changeColor('#e74c3c')"></div>
+            <div class="color-option" style="background-color: #2ecc71;" onclick="changeColor('#2ecc71')"></div>
+            <div class="color-option" style="background-color: #f1c40f;" onclick="changeColor('#f1c40f')"></div>
+        </div>
+    </div>
+
+    <script>
+        function changeColor(color) {
+            document.documentElement.style.setProperty('--product-color', color);
+        }
+    </script>
+</body>
+</html>
